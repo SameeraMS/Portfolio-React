@@ -50,7 +50,7 @@ function App() {
                 ))}
               </div>
 
-              <div className="flex items-center text-purple-100 gap-8">
+              <div className="flex items-center text-purple-100 gap-4 md:gap-4 lg:gap-8">
                 <Linkedin className="w-6 h-6 transition-transform hover:scale-125 cursor-pointer"/>
                 <Github className="w-6 h-6 transition-transform hover:scale-125 cursor-pointer"/>
                 <LucideMail className="w-6 h-6 transition-transform hover:scale-125 cursor-pointer"/>
@@ -100,14 +100,14 @@ function App() {
               <p className="text-purple-100 mb-8">
                 Building innovative solutions with modern technologies
               </p>
-              <div className="grid grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-3 mb-12 mx-14">
+              <div className="grid grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-3 mb-12 mx-10 md:mx-14 lg:mx-24">
                 {["frontend", "backend", "mobile", "database", "other"].map((tab) => (
                     <button
                         key={tab}
                         onClick={() => {
                           setActiveSkillTab(tab);
                         }}
-                        className={`px-6 py-2 rounded-full font-semibold transition-colors ${
+                        className={`py-2 rounded-full font-semibold transition-colors ${
                             activeSkillTab === tab
                                 ? "bg-white text-dark-blue"
                                 : "bg-white/10 text-white hover:bg-white/20"
@@ -300,18 +300,18 @@ function App() {
                         alt={post.title}
                         className="w-full h-48 object-cover"
                     />
-                    <div className="p-6">
+                    <div className="p-6 flex flex-col">
                       <div className="flex items-center gap-2 mb-3">
                     <span className="bg-purple-500/20 text-purple-200 px-3 py-1 rounded-full text-sm">
                       {post.category}
                     </span>
                         <span className="text-purple-200 text-sm">{post.date}</span>
                       </div>
-                      <h3 className="text-xl font-semibold text-white mb-2">{post.title}</h3>
+                      <h3 className="text-xl font-bold text-white mb-4">{post.title}</h3>
                       <p className="text-purple-100 mb-4">{post.excerpt}</p>
                       <a
                           href={post.link}
-                          className="text-purple-200 hover:text-white transition-colors inline-flex items-center"
+                          className="text-purple-200 hover:text-white transition-colors inline-flex items-center ml-auto"
                       >
                         Read More <ExternalLink className="w-4 h-4 ml-2"/>
                       </a>
@@ -690,28 +690,28 @@ const education = [
 
 const blogPosts = [
   {
-    title: 'The Future of React Development',
-    excerpt: 'Exploring the latest features and best practices in React 18...',
+    title: 'A Guide to Threads in Java',
+    excerpt: 'The world of threads in Java, exploring their creation, lifecycle, synchronization mechanisms, and best practices.',
     image: 'https://images.unsplash.com/photo-1633356122544-f134324a6cee?auto=format&fit=crop&w=800&h=400',
-    category: 'React',
-    date: 'Mar 15, 2024',
-    link: '#',
+    category: 'Java',
+    date: 'Apr 07, 2024',
+    link: 'https://sameerams.medium.com/mastering-concurrency-a-guide-to-threads-in-java-f44843c87ebc',
   },
   {
-    title: 'Building Scalable Backend Services',
-    excerpt: 'Learn how to design and implement highly scalable backend architectures...',
+    title: 'Git: A Comprehensive Guide to Version',
+    excerpt: 'Git, a distributed version control system, has revolutionized the way teams collaborate and manage code.',
     image: 'https://images.unsplash.com/photo-1627398242454-45a1465c2479?auto=format&fit=crop&w=800&h=400',
-    category: 'Backend',
-    date: 'Mar 10, 2024',
-    link: '#',
+    category: 'GIT',
+    date: 'Apr 08, 2024',
+    link: 'https://sameerams.medium.com/demystifying-git-a-comprehensive-guide-to-version-control-463515b5eef4',
   },
   {
-    title: 'Mobile App Development Trends',
-    excerpt: 'Stay ahead with the latest trends in mobile app development...',
+    title: 'JAVA Serialization and Deserialization',
+    excerpt: 'comprehensive understanding of how to effectively serialize and deserialize objects in Java, enabling you to store and transfer data with ease and efficiency in your Java projects.',
     image: 'https://images.unsplash.com/photo-1512941937669-90a1b58e7e9c?auto=format&fit=crop&w=800&h=400',
-    category: 'Mobile',
-    date: 'Mar 5, 2024',
-    link: '#',
+    category: 'Java',
+    date: 'Jul 18, 2024',
+    link: 'https://medium.com/@sameerams/java-serialization-and-deserialization-b8b1deb7eeb8',
   },
 ];
 

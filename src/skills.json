@@ -1,0 +1,222 @@
+[
+  {
+    "name": "HTML",
+    "category": "frontend",
+    "icon": "https://skillicons.dev/icons?i=html"
+  },
+  {
+    "name": "CSS",
+    "category": "frontend",
+    "icon": "https://skillicons.dev/icons?i=css"
+  },
+  {
+    "name": "JavaScript",
+    "category": "frontend",
+    "icon": "https://skillicons.dev/icons?i=javascript"
+  },
+  {
+    "name": "TypeScript",
+    "category": "frontend",
+    "icon": "https://skillicons.dev/icons?i=typescript"
+  },
+  {
+    "name": "Bootstrap",
+    "category": "frontend",
+    "icon": "https://skillicons.dev/icons?i=bootstrap"
+  },
+  {
+    "name": "Tailwind CSS",
+    "category": "frontend",
+    "icon": "https://skillicons.dev/icons?i=tailwind"
+  },
+  {
+    "name": "React",
+    "category": "frontend",
+    "icon": "https://skillicons.dev/icons?i=react"
+  },
+  {
+    "name": "Vite",
+    "category": "frontend",
+    "icon": "https://skillicons.dev/icons?i=vite"
+  },
+  {
+    "name": "Vue.js",
+    "category": "frontend",
+    "icon": "https://skillicons.dev/icons?i=vuejs"
+  },
+  {
+    "name": "Next.js",
+    "category": "frontend",
+    "icon": "https://skillicons.dev/icons?i=nextjs"
+  },
+  {
+    "name": "jQuery",
+    "category": "frontend",
+    "icon": "https://skillicons.dev/icons?i=jquery"
+  },
+  {
+    "name": "Flask",
+    "category": "frontend",
+    "icon": "https://skillicons.dev/icons?i=flask"
+  },
+  {
+    "name": "Java",
+    "category": "backend",
+    "icon": "https://skillicons.dev/icons?i=java"
+  },
+  {
+    "name": "NestJS",
+    "category": "backend",
+    "icon": "https://skillicons.dev/icons?i=nestjs"
+  },
+  {
+    "name": "Spring",
+    "category": "backend",
+    "icon": "https://skillicons.dev/icons?i=spring"
+  },
+  {
+    "name": "Python",
+    "category": "backend",
+    "icon": "https://skillicons.dev/icons?i=python"
+  },
+  {
+    "name": "C++",
+    "category": "backend",
+    "icon": "https://skillicons.dev/icons?i=cpp"
+  },
+  {
+    "name": "C#",
+    "category": "backend",
+    "icon": "https://skillicons.dev/icons?i=cs"
+  },
+  {
+    "name": "Node.js",
+    "category": "backend",
+    "icon": "https://skillicons.dev/icons?i=nodejs"
+  },
+  {
+    "name": "Express.js",
+    "category": "backend",
+    "icon": "https://skillicons.dev/icons?i=express"
+  },
+  {
+    "name": "MySQL",
+    "category": "database",
+    "icon": "https://skillicons.dev/icons?i=mysql"
+  },
+  {
+    "name": "MongoDB",
+    "category": "database",
+    "icon": "https://skillicons.dev/icons?i=mongodb"
+  },
+  {
+    "name": "Supabase",
+    "category": "database",
+    "icon": "https://skillicons.dev/icons?i=supabase"
+  },
+  {
+    "name": "PostgreSQL",
+    "category": "database",
+    "icon": "https://skillicons.dev/icons?i=postgresql"
+  },
+  {
+    "name": "Gradle",
+    "category": "automation",
+    "icon": "https://skillicons.dev/icons?i=gradle"
+  },
+  {
+    "name": "Maven",
+    "category": "automation",
+    "icon": "https://skillicons.dev/icons?i=maven"
+  },
+  {
+    "name": "Hibernate",
+    "category": "orm",
+    "icon": "https://skillicons.dev/icons?i=hibernate"
+  },
+  {
+    "name": "Git",
+    "category": "other",
+    "icon": "https://skillicons.dev/icons?i=git"
+  },
+  {
+    "name": "GitHub",
+    "category": "other",
+    "icon": "https://skillicons.dev/icons?i=github"
+  },
+  {
+    "name": "GitLab",
+    "category": "other",
+    "icon": "https://skillicons.dev/icons?i=gitlab"
+  },
+  {
+    "name": "Postman",
+    "category": "other",
+    "icon": "https://skillicons.dev/icons?i=postman"
+  },
+  {
+    "name": "Regex",
+    "category": "other",
+    "icon": "https://skillicons.dev/icons?i=regex"
+  },
+  {
+    "name": "CodePen",
+    "category": "other",
+    "icon": "https://skillicons.dev/icons?i=codepen"
+  },
+  {
+    "name": "Discord",
+    "category": "other",
+    "icon": "https://skillicons.dev/icons?i=discord"
+  },
+  {
+    "name": "Figma",
+    "category": "other",
+    "icon": "https://skillicons.dev/icons?i=figma"
+  },
+  {
+    "name": "Firebase",
+    "category": "other",
+    "icon": "https://skillicons.dev/icons?i=firebase"
+  },
+  {
+    "name": "NPM",
+    "category": "other",
+    "icon": "https://skillicons.dev/icons?i=npm"
+  },
+  {
+    "name": "Photoshop",
+    "category": "other",
+    "icon": "https://skillicons.dev/icons?i=ps"
+  },
+  {
+    "name": "Wordpress",
+    "category": "other",
+    "icon": "https://skillicons.dev/icons?i=wordpress"
+  },
+  {
+    "name": "AWS",
+    "category": "other",
+    "icon": "https://skillicons.dev/icons?i=aws"
+  },
+  {
+    "name": "Heroku",
+    "category": "other",
+    "icon": "https://skillicons.dev/icons?i=heroku"
+  },
+  {
+    "name": "Vercel",
+    "category": "other",
+    "icon": "https://skillicons.dev/icons?i=vercel"
+  },
+  {
+    "name": "Stack Overflow",
+    "category": "other",
+    "icon": "https://skillicons.dev/icons?i=stackoverflow"
+  },
+  {
+    "name": "Rect Native",
+    "category": "mobile",
+    "icon": "https://skillicons.dev/icons?i=react"
+  },
+]

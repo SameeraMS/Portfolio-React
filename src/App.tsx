@@ -100,7 +100,7 @@ function App() {
               <p className="text-purple-100 mb-8">
                 Building innovative solutions with modern technologies
               </p>
-              <div className="flex justify-center gap-4 mb-12">
+              <div className="grid grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-3 mb-12 mx-14">
                 {["frontend", "backend", "mobile", "database", "other"].map((tab) => (
                     <button
                         key={tab}

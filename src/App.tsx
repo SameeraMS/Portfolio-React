@@ -18,6 +18,18 @@ import {
   LucideMail
 } from 'lucide-react';
 import heroPic from './assets/heroPic.png';
+import chatAppImg from "./assets/chatapp.jpeg";
+import loginAuthImg from "./assets/login-authentication.jpg";
+import carRentImg from "./assets/carrent.jpg";
+import libraryImg from "./assets/library.jpeg";
+import animalHospitalImg from "./assets/animalHospital.png";
+import posImg from "./assets/pos.png";
+import cropImg from "./assets/crop.jpg";
+import medicareWebImg from "./assets/medicareWeb.jpg";
+import medicareMobileImg from "./assets/medicareMobile.jpg";
+import threadsImg from './assets/threads.png';
+import gitImg from './assets/git.jpeg';
+import serializeImg from './assets/serialize.jpg';
 
 function App() {
   const [activeSkillTab, setActiveSkillTab] = useState('frontend');
@@ -639,98 +651,89 @@ const skills = [
 ;
 
 const projects = [
-      {
-        "title": "Chat Application",
-        "description": "A real-time chat system for fast and responsive communication.",
-        "image": "src/assets/chatapp.jpeg",
-        "technologies": ["Next.js", "WebSocket", "NestJS", "TypeScript", "Supabase"],
-        "github": "https://github.com/SameeraMS/Chat-App-Backend.git",
-        "live": "https://www.linkedin.com/posts/sameera-madushan-61ba9a278_webdevelopment-nextjs-nestjs-activity-7248976398713831424-Hz5Q?utm_source=share&utm_medium=member_desktop&rcm=ACoAAEPK1_cBMHUQOXKGG318iDpjfvHlNaZibOA",
-        "category": "web"
-      },
-      {
-        "title": "Note Collector",
-        "description": "An application for collecting, organizing, and managing notes.",
-        "image": "https://images.unsplash.com/photo-1540350394557-8d14678e7f91?auto=format&fit=crop&w=800&h=400",
-        "technologies": ["Java", "Spring Boot", "MySQL", "Hibernate"],
-        "github": "https://github.com/SameeraMS/Note-Collector-Backend.git",
-        "live": "",
-        "category": "desktop"
-      },
-      {
-        "title": "User-Authentication System",
-        "description": "A platform for secure user login, password management, and sessions.",
-        "image": "src/assets/login-authentication.jpg",
-        "technologies": ["HTML", "JavaScript", "Java", "Spring Boot", "Firebase"],
-        "github": "https://github.com/SameeraMS/Springboot-Login.git",
-        "live": "",
-        "category": "web"
-      },
-      {
-        "title": "Car Rental Website",
-        "description": "A website for viewing available vehicles, booking options, and pricing.",
-        "image": "src/assets/carrent.jpg",
-        "technologies": ["HTML", "CSS", "JavaScript"],
-        "github": "https://sameerams.github.io/Car-Rental/",
-        "live": "https://www.linkedin.com/posts/sameera-madushan-61ba9a278_carrental-webdevelopment-html-activity-7218549804765757440-B_Uv?utm_source=share&utm_medium=member_desktop&rcm=ACoAAEPK1_cBMHUQOXKGG318iDpjfvHlNaZibOA",
-        "category": "web"
-      },
-      {
-        "title": "Library Management System",
-        "description": "A desktop application for managing books, members, and transactions.",
-        "image": "src/assets/library.jpeg",
-        "technologies": ["JavaFX", "MySQL", "Hibernate ORM"],
-        "github": "https://github.com/SameeraMS/Library-Management-System.git",
-        "live": "https://www.linkedin.com/posts/sameera-madushan-61ba9a278_java-javafx-css-activity-7203362284339933184-E6gS?utm_source=share&utm_medium=member_desktop&rcm=ACoAAEPK1_cBMHUQOXKGG318iDpjfvHlNaZibOA",
-        "category": "desktop"
-      },
-      {
-        "title": "Animal Hospital Management System",
-        "description": "A system for managing animals, appointments, and medical records.",
-        "image": "src/assets/animalHospital.png",
-        "technologies": ["JavaFX", "Layered Architecture", "MySQL", "SMTP", "Sarox Webcam Library"],
-        "github": "https://github.com/SameeraMS/Animal-Hospital-System-With-Layered.git",
-        "live": "https://www.linkedin.com/posts/sameera-madushan-61ba9a278_ijse-java-mysql-activity-7155242163335757824-zYx9?utm_source=share&utm_medium=member_desktop&rcm=ACoAAEPK1_cBMHUQOXKGG318iDpjfvHlNaZibOA",
-        "category": "desktop"
-      },
-      {
-        "title": "Shop Billing System",
-        "description": "A system for managing products, inventory, sales, and customer data.",
-        "image": "src/assets/pos.png",
-        "technologies": ["HTML", "JavaScript", "Java Spring", "MySQL", "Hibernate"],
-        "github": "https://github.com/SameeraMS/Pos-System-FrontEnd.git",
-        "live": "",
-        "category": "web"
-      },
-      {
-        "title": "Crop Monitoring System",
-        "description": "A system for managing crops and monitoring agricultural activities.",
-        "image": "src/assets/crop.jpg",
-        "technologies": ["Java", "Spring Boot", "MySQL", "Hibernate", "HTML", "CSS", "Ajax", "JWT"],
-        "github": "https://github.com/SameeraMS/Crop-Monitoring-System-Backend.git",
-        "live": "",
-        "category": "web"
-      },
-      {
-        "title": "MediCare",
-        "description": "An application for booking and managing doctor appointments.",
-        "image": "src/assets/medicareWeb.jpg",
-        "technologies": ["MongoDB", "Express.js", "React", "Node.js", "JWT", "Redux"],
-        "github": "https://github.com/SameeraMS/Medi-Care-React.git",
-        "live": "",
-        "category": "web"
-      },
-      {
-        "title": "MediCare Mobile App",
-        "description": "A mobile app for doctor appointment booking and management.",
-        "image": "src/assets/medicareMobile.jpg",
-        "technologies": ["MongoDB", "Express.js", "React Native", "JWT", "Redux"],
-        "github": "https://github.com/SameeraMS/MediCare-Mobile.git",
-        "live": "",
-        "category": "mobile"
-      }
-    ]
-;
+  {
+    title: "Chat Application",
+    description: "A real-time chat system for fast and responsive communication.",
+    image: chatAppImg,
+    technologies: ["Next.js", "WebSocket", "NestJS", "TypeScript", "Supabase"],
+    github: "https://github.com/SameeraMS/Chat-App-Backend.git",
+    live: "https://www.linkedin.com/posts/sameera-madushan-61ba9a278_webdevelopment-nextjs-nestjs-activity-7248976398713831424-Hz5Q?utm_source=share&utm_medium=member_desktop&rcm=ACoAAEPK1_cBMHUQOXKGG318iDpjfvHlNaZibOA",
+    category: "web"
+  },
+  {
+    title: "User-Authentication System",
+    description: "A platform for secure user login, password management, and sessions.",
+    image: loginAuthImg,
+    technologies: ["HTML", "JavaScript", "Java", "Spring Boot", "Firebase"],
+    github: "https://github.com/SameeraMS/Springboot-Login.git",
+    live: "",
+    category: "web"
+  },
+  {
+    title: "Car Rental Website",
+    description: "A website for viewing available vehicles, booking options, and pricing.",
+    image: carRentImg,
+    technologies: ["HTML", "CSS", "JavaScript"],
+    github: "https://sameerams.github.io/Car-Rental/",
+    live: "https://www.linkedin.com/posts/sameera-madushan-61ba9a278_carrental-webdevelopment-html-activity-7218549804765757440-B_Uv?utm_source=share&utm_medium=member_desktop&rcm=ACoAAEPK1_cBMHUQOXKGG318iDpjfvHlNaZibOA",
+    category: "web"
+  },
+  {
+    title: "Library Management System",
+    description: "A desktop application for managing books, members, and transactions.",
+    image: libraryImg,
+    technologies: ["JavaFX", "MySQL", "Hibernate ORM"],
+    github: "https://github.com/SameeraMS/Library-Management-System.git",
+    live: "https://www.linkedin.com/posts/sameera-madushan-61ba9a278_java-javafx-css-activity-7203362284339933184-E6gS?utm_source=share&utm_medium=member_desktop&rcm=ACoAAEPK1_cBMHUQOXKGG318iDpjfvHlNaZibOA",
+    category: "desktop"
+  },
+  {
+    title: "Animal Hospital Management System",
+    description: "A system for managing animals, appointments, and medical records.",
+    image: animalHospitalImg,
+    technologies: ["JavaFX", "Layered Architecture", "MySQL", "SMTP", "Sarox Webcam Library"],
+    github: "https://github.com/SameeraMS/Animal-Hospital-System-With-Layered.git",
+    live: "https://www.linkedin.com/posts/sameera-madushan-61ba9a278_ijse-java-mysql-activity-7155242163335757824-zYx9?utm_source=share&utm_medium=member_desktop&rcm=ACoAAEPK1_cBMHUQOXKGG318iDpjfvHlNaZibOA",
+    category: "desktop"
+  },
+  {
+    title: "Shop Billing System",
+    description: "A system for managing products, inventory, sales, and customer data.",
+    image: posImg,
+    technologies: ["HTML", "JavaScript", "Java Spring", "MySQL", "Hibernate"],
+    github: "https://github.com/SameeraMS/Pos-System-FrontEnd.git",
+    live: "",
+    category: "web"
+  },
+  {
+    title: "Crop Monitoring System",
+    description: "A system for managing crops and monitoring agricultural activities.",
+    image: cropImg,
+    technologies: ["Java", "Spring Boot", "MySQL", "Hibernate", "HTML", "CSS", "Ajax", "JWT"],
+    github: "https://github.com/SameeraMS/Crop-Monitoring-System-Backend.git",
+    live: "",
+    category: "web"
+  },
+  {
+    title: "MediCare",
+    description: "An application for booking and managing doctor appointments.",
+    image: medicareWebImg,
+    technologies: ["MongoDB", "Express.js", "React", "Node.js", "JWT", "Redux"],
+    github: "https://github.com/SameeraMS/Medi-Care-React.git",
+    live: "",
+    category: "web"
+  },
+  {
+    title: "MediCare Mobile App",
+    description: "A mobile app for doctor appointment booking and management.",
+    image: medicareMobileImg,
+    technologies: ["MongoDB", "Express.js", "React Native", "JWT", "Redux"],
+    github: "https://github.com/SameeraMS/MediCare-Mobile.git",
+    live: "",
+    category: "mobile"
+  }
+];
+
 
 const experiences = [
   {
@@ -778,7 +781,7 @@ const blogPosts = [
   {
     title: 'A Guide to Threads in Java',
     excerpt: 'The world of threads in Java, exploring their creation, lifecycle, synchronization mechanisms, and best practices.',
-    image: 'src/assets/threads.png',
+    image: threadsImg,
     category: 'Java',
     date: 'Apr 07, 2024',
     link: 'https://sameerams.medium.com/mastering-concurrency-a-guide-to-threads-in-java-f44843c87ebc',
@@ -786,7 +789,7 @@ const blogPosts = [
   {
     title: 'Git: A Comprehensive Guide to Version',
     excerpt: 'Git, a distributed version control system, has revolutionized the way teams collaborate and manage code.',
-    image: 'src/assets/git.jpeg',
+    image: gitImg,
     category: 'GIT',
     date: 'Apr 08, 2024',
     link: 'https://sameerams.medium.com/demystifying-git-a-comprehensive-guide-to-version-control-463515b5eef4',
@@ -794,7 +797,7 @@ const blogPosts = [
   {
     title: 'JAVA Serialization and Deserialization',
     excerpt: 'comprehensive understanding of how to effectively serialize and deserialize objects in Java, enabling you to store and transfer data with ease and efficiency in your Java projects.',
-    image: 'src/assets/serialize.jpg',
+    image: serializeImg,
     category: 'Java',
     date: 'Jul 18, 2024',
     link: 'https://medium.com/@sameerams/java-serialization-and-deserialization-b8b1deb7eeb8',

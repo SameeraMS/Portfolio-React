@@ -21,7 +21,7 @@ import heroPic from './assets/heroPic.png';
 
 function App() {
   const [activeSkillTab, setActiveSkillTab] = useState('frontend');
-  const [activeProjectTab, setActiveProjectTab] = useState('all');
+  const [activeProjectTab, setActiveProjectTab] = useState('web');
 
   const filteredSkills = activeSkillTab === 'all'
       ? skills
@@ -51,9 +51,15 @@ function App() {
               </div>
 
               <div className="flex items-center text-purple-100 gap-4 md:gap-4 lg:gap-8">
-                <Linkedin className="w-6 h-6 transition-transform hover:scale-125 cursor-pointer"/>
-                <Github className="w-6 h-6 transition-transform hover:scale-125 cursor-pointer"/>
-                <LucideMail className="w-6 h-6 transition-transform hover:scale-125 cursor-pointer"/>
+                <a href="http://www.linkedin.com/in/sameera-madushan-61ba9a278">
+                  <Linkedin className="w-6 h-6 transition-transform hover:scale-125 cursor-pointer"/>
+                </a>
+                <a href="https://github.com/SameeraMS">
+                  <Github className="w-6 h-6 transition-transform hover:scale-125 cursor-pointer"/>
+                </a>
+                <a href="madushansameera499@gmail.com">
+                  <LucideMail className="w-6 h-6 transition-transform hover:scale-125 cursor-pointer"/>
+                </a>
               </div>
             </div>
           </div>
@@ -159,10 +165,15 @@ function App() {
                           {exp.period}
                     </span>
                       </div>
-                      <div className="flex items-center text-purple-200 mb-4">
+                      <a
+                          href={exp.url}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="flex items-center text-purple-200 mb-4"
+                      >
                         <Building className="w-4 h-4 mr-2"/>
                         {exp.company}
-                      </div>
+                      </a>
                       <p className="text-purple-100 mb-4">{exp.description}</p>
                       <div className="flex flex-wrap gap-2">
                         {exp.technologies.map((tech) => (
@@ -222,7 +233,7 @@ function App() {
                 Here are some of my recent works that showcase my skills and experience.
               </p>
               <div className="flex justify-center gap-4 mb-12">
-                {['all', 'web', 'mobile', 'desktop'].map((tab) => (
+                {['web', 'mobile', 'desktop'].map((tab) => (
                     <button
                         key={tab}
                         onClick={() => setActiveProjectTab(tab)}
@@ -268,15 +279,18 @@ function App() {
                         >
                           <Github className="w-6 h-6"/>
                         </a>
-                        <a
-                            href={project.live}
-                            className="text-white hover:text-purple-200 transition-colors"
-                            target="_blank"
-                            rel="noopener noreferrer"
-                        >
-                          <ExternalLink className="w-6 h-6"/>
-                        </a>
-                      </div>
+                        { project.live == "" ? null :
+                            <a
+                              href={project.live}
+                              className="text-white hover:text-purple-200 transition-colors"
+                              target="_blank"
+                              rel="noopener noreferrer"
+                            >
+                            <ExternalLink className="w-6 h-6"/>
+                            </a>
+                        }
+
+                    </div>
                     </div>
                   </div>
               ))}
@@ -294,7 +308,8 @@ function App() {
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
               {blogPosts.map((post) => (
                   <div key={post.title}
-                       className="bg-white/10 backdrop-blur-lg rounded-lg overflow-hidden transform hover:scale-105 transition-all">
+                       className="bg-white/10 backdrop-blur-lg rounded-lg overflow-hidden transform hover:scale-105 transition-all"
+                  >
                     <img
                         src={post.image}
                         alt={post.title}
@@ -571,7 +586,7 @@ const skills = [
       },
       {
         "name": "Firebase",
-        "category": "other",
+        "category": "database",
         "icon": "https://skillicons.dev/icons?i=firebase"
       },
       {
@@ -618,42 +633,107 @@ const skills = [
 ;
 
 const projects = [
-  {
-    title: 'E-Commerce Platform',
-    description: 'A full-stack e-commerce platform with real-time inventory management.',
-    image: 'https://images.unsplash.com/photo-1557821552-17105176677c?auto=format&fit=crop&w=800&h=400',
-    technologies: ['React', 'Node.js', 'MongoDB', 'Socket.io'],
-    github: 'https://github.com',
-    live: 'https://example.com',
-    category: 'web',
-  },
-  {
-    title: 'Mobile Task Manager',
-    description: 'A cross-platform mobile app for task management and collaboration.',
-    image: 'https://images.unsplash.com/photo-1540350394557-8d14678e7f91?auto=format&fit=crop&w=800&h=400',
-    technologies: ['React Native', 'Firebase', 'Redux'],
-    github: 'https://github.com',
-    live: 'https://example.com',
-    category: 'mobile',
-  },
-  {
-    title: 'Desktop Analytics Tool',
-    description: 'A powerful desktop application for data analysis and visualization.',
-    image: 'https://images.unsplash.com/photo-1592210454359-9043f067919b?auto=format&fit=crop&w=800&h=400',
-    technologies: ['Electron', 'React', 'D3.js'],
-    github: 'https://github.com',
-    live: 'https://example.com',
-    category: 'desktop',
-  },
-];
+      {
+        "title": "Chat Application",
+        "description": "A real-time chat system for fast and responsive communication.",
+        "image": "src/assets/chatapp.jpeg",
+        "technologies": ["Next.js", "WebSocket", "NestJS", "TypeScript", "Supabase"],
+        "github": "https://github.com/SameeraMS/Chat-App-Backend.git",
+        "live": "https://www.linkedin.com/posts/sameera-madushan-61ba9a278_webdevelopment-nextjs-nestjs-activity-7248976398713831424-Hz5Q?utm_source=share&utm_medium=member_desktop&rcm=ACoAAEPK1_cBMHUQOXKGG318iDpjfvHlNaZibOA",
+        "category": "web"
+      },
+      {
+        "title": "Note Collector",
+        "description": "An application for collecting, organizing, and managing notes.",
+        "image": "https://images.unsplash.com/photo-1540350394557-8d14678e7f91?auto=format&fit=crop&w=800&h=400",
+        "technologies": ["Java", "Spring Boot", "MySQL", "Hibernate"],
+        "github": "https://github.com/SameeraMS/Note-Collector-Backend.git",
+        "live": "",
+        "category": "desktop"
+      },
+      {
+        "title": "User-Authentication System",
+        "description": "A platform for secure user login, password management, and sessions.",
+        "image": "src/assets/login-authentication.jpg",
+        "technologies": ["HTML", "JavaScript", "Java", "Spring Boot", "Firebase"],
+        "github": "https://github.com/SameeraMS/Springboot-Login.git",
+        "live": "",
+        "category": "web"
+      },
+      {
+        "title": "Car Rental Website",
+        "description": "A website for viewing available vehicles, booking options, and pricing.",
+        "image": "src/assets/carrent.jpg",
+        "technologies": ["HTML", "CSS", "JavaScript"],
+        "github": "https://sameerams.github.io/Car-Rental/",
+        "live": "https://www.linkedin.com/posts/sameera-madushan-61ba9a278_carrental-webdevelopment-html-activity-7218549804765757440-B_Uv?utm_source=share&utm_medium=member_desktop&rcm=ACoAAEPK1_cBMHUQOXKGG318iDpjfvHlNaZibOA",
+        "category": "web"
+      },
+      {
+        "title": "Library Management System",
+        "description": "A desktop application for managing books, members, and transactions.",
+        "image": "src/assets/library.jpeg",
+        "technologies": ["JavaFX", "MySQL", "Hibernate ORM"],
+        "github": "https://github.com/SameeraMS/Library-Management-System.git",
+        "live": "https://www.linkedin.com/posts/sameera-madushan-61ba9a278_java-javafx-css-activity-7203362284339933184-E6gS?utm_source=share&utm_medium=member_desktop&rcm=ACoAAEPK1_cBMHUQOXKGG318iDpjfvHlNaZibOA",
+        "category": "desktop"
+      },
+      {
+        "title": "Animal Hospital Management System",
+        "description": "A system for managing animals, appointments, and medical records.",
+        "image": "src/assets/animalHospital.png",
+        "technologies": ["JavaFX", "Layered Architecture", "MySQL", "SMTP", "Sarox Webcam Library"],
+        "github": "https://github.com/SameeraMS/Animal-Hospital-System-With-Layered.git",
+        "live": "https://www.linkedin.com/posts/sameera-madushan-61ba9a278_ijse-java-mysql-activity-7155242163335757824-zYx9?utm_source=share&utm_medium=member_desktop&rcm=ACoAAEPK1_cBMHUQOXKGG318iDpjfvHlNaZibOA",
+        "category": "desktop"
+      },
+      {
+        "title": "Shop Billing System",
+        "description": "A system for managing products, inventory, sales, and customer data.",
+        "image": "src/assets/pos.png",
+        "technologies": ["HTML", "JavaScript", "Java Spring", "MySQL", "Hibernate"],
+        "github": "https://github.com/SameeraMS/Pos-System-FrontEnd.git",
+        "live": "",
+        "category": "web"
+      },
+      {
+        "title": "Crop Monitoring System",
+        "description": "A system for managing crops and monitoring agricultural activities.",
+        "image": "src/assets/crop.jpg",
+        "technologies": ["Java", "Spring Boot", "MySQL", "Hibernate", "HTML", "CSS", "Ajax", "JWT"],
+        "github": "https://github.com/SameeraMS/Crop-Monitoring-System-Backend.git",
+        "live": "",
+        "category": "web"
+      },
+      {
+        "title": "MediCare",
+        "description": "An application for booking and managing doctor appointments.",
+        "image": "src/assets/medicareWeb.jpg",
+        "technologies": ["MongoDB", "Express.js", "React", "Node.js", "JWT", "Redux"],
+        "github": "https://github.com/SameeraMS/Medi-Care-React.git",
+        "live": "",
+        "category": "web"
+      },
+      {
+        "title": "MediCare Mobile App",
+        "description": "A mobile app for doctor appointment booking and management.",
+        "image": "src/assets/medicareMobile.jpg",
+        "technologies": ["MongoDB", "Express.js", "React Native", "JWT", "Redux"],
+        "github": "https://github.com/SameeraMS/MediCare-Mobile.git",
+        "live": "",
+        "category": "mobile"
+      }
+    ]
+;
 
 const experiences = [
   {
     "role": "Freelancer",
-    "company": "",
-    "period": "2022 - Present",
+    "company": "OS Solutions",
+    "url": "https://ossolutions.vercel.app",
+    "period": "2024 - Present",
     "description": "Developing scalable web and standalone applications while optimizing performance and user experience.",
-    "technologies": ["React", "Node.js", "MongoDB", "AWS", "Springboot"]
+    "technologies": ["React", "Node.js", "MongoDB", "AWS", "Springboot", "Wordpress"]
   },
 ];
 
@@ -692,7 +772,7 @@ const blogPosts = [
   {
     title: 'A Guide to Threads in Java',
     excerpt: 'The world of threads in Java, exploring their creation, lifecycle, synchronization mechanisms, and best practices.',
-    image: 'https://images.unsplash.com/photo-1633356122544-f134324a6cee?auto=format&fit=crop&w=800&h=400',
+    image: 'src/assets/threads.png',
     category: 'Java',
     date: 'Apr 07, 2024',
     link: 'https://sameerams.medium.com/mastering-concurrency-a-guide-to-threads-in-java-f44843c87ebc',
@@ -700,7 +780,7 @@ const blogPosts = [
   {
     title: 'Git: A Comprehensive Guide to Version',
     excerpt: 'Git, a distributed version control system, has revolutionized the way teams collaborate and manage code.',
-    image: 'https://images.unsplash.com/photo-1627398242454-45a1465c2479?auto=format&fit=crop&w=800&h=400',
+    image: 'src/assets/git.jpeg',
     category: 'GIT',
     date: 'Apr 08, 2024',
     link: 'https://sameerams.medium.com/demystifying-git-a-comprehensive-guide-to-version-control-463515b5eef4',
@@ -708,7 +788,7 @@ const blogPosts = [
   {
     title: 'JAVA Serialization and Deserialization',
     excerpt: 'comprehensive understanding of how to effectively serialize and deserialize objects in Java, enabling you to store and transfer data with ease and efficiency in your Java projects.',
-    image: 'https://images.unsplash.com/photo-1512941937669-90a1b58e7e9c?auto=format&fit=crop&w=800&h=400',
+    image: 'src/assets/serialize.jpg',
     category: 'Java',
     date: 'Jul 18, 2024',
     link: 'https://medium.com/@sameerams/java-serialization-and-deserialization-b8b1deb7eeb8',

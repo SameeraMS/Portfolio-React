@@ -57,7 +57,7 @@ function App() {
                 <a href="https://github.com/SameeraMS">
                   <Github className="w-6 h-6 transition-transform hover:scale-125 cursor-pointer"/>
                 </a>
-                <a href="madushansameera499@gmail.com">
+                <a href="mailto:madushansameera499@gmail.com">
                   <LucideMail className="w-6 h-6 transition-transform hover:scale-125 cursor-pointer"/>
                 </a>
               </div>
@@ -362,9 +362,15 @@ function App() {
                       <span>Panadura, Sri Lanka</span>
                     </div>
                     <div className="flex items-center text-purple-100 gap-8 pt-8">
-                      <Linkedin className="w-6 h-6"/>
-                      <Github className="w-6 h-6"/>
-                      <LucideMail className="w-6 h-6"/>
+                      <a href="http://www.linkedin.com/in/sameera-madushan-61ba9a278">
+                        <Linkedin className="w-6 h-6 transition-transform hover:scale-125 cursor-pointer"/>
+                      </a>
+                      <a href="https://github.com/SameeraMS">
+                        <Github className="w-6 h-6 transition-transform hover:scale-125 cursor-pointer"/>
+                      </a>
+                      <a href="mailto:madushansameera499@gmail.com">
+                        <LucideMail className="w-6 h-6 transition-transform hover:scale-125 cursor-pointer"/>
+                      </a>
                     </div>
                   </div>
                 </div>

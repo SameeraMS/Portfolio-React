@@ -17,6 +17,7 @@ import {
   Briefcase,
   LucideMail
 } from 'lucide-react';
+import emailjs from '@emailjs/browser';
 import heroPic from './assets/heroPic.png';
 import chatAppImg from "./assets/chatapp.jpeg";
 import loginAuthImg from "./assets/login-authentication.jpg";
@@ -30,10 +31,41 @@ import medicareMobileImg from "./assets/medicareMobile.jpg";
 import threadsImg from './assets/threads.png';
 import gitImg from './assets/git.jpeg';
 import serializeImg from './assets/serialize.jpg';
+import resume from './assets/Sameera Madushan.pdf';
 
 function App() {
   const [activeSkillTab, setActiveSkillTab] = useState('frontend');
   const [activeProjectTab, setActiveProjectTab] = useState('web');
+
+  const [name, setName] = useState('');
+  const [email, setEmail] = useState('');
+  const [message, setMessage] = useState('');
+
+  const handleSubmit = () => {
+
+    const serviceId = 'service_9bsvbix';
+    const templateId = 'template_5pwh07k';
+    const publicKey = 'VDd9I0ZeOSjHE89gm';
+
+    const formData = {
+      name: name,
+      email: email,
+      message: message
+    };
+
+    emailjs.send(serviceId, templateId, formData, publicKey)
+        .then((response) => {
+          alert('Email sent successfully!');
+          setName('');
+          setEmail('');
+          setMessage('');
+        })
+        .catch((error) => {
+          console.error('Email sending failed:', error);
+          alert('Failed to send email. Please try again.');
+        });
+
+  };
 
   const filteredSkills = activeSkillTab === 'all'
       ? skills
@@ -91,14 +123,19 @@ function App() {
                   web and mobile apps.
                 </p>
                 <div className="flex space-x-4">
-                  <button
+                  <a
+                      href="#projects"
                       className="bg-white text-dark-blue px-8 py-3 rounded-full font-semibold hover:bg-purple-100 transition-colors flex items-center">
                   <Code className="mr-2"/> View Work
-                  </button>
-                  <button
-                      className="border-2 border-white text-white px-8 py-3 rounded-full font-semibold hover:bg-white/10 transition-colors flex items-center">
+                  </a>
+                  <a
+                      href={resume}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="border-2 border-white text-white px-8 py-3 rounded-full font-semibold hover:bg-white/10 transition-colors flex items-center"
+                  >
                     <Download className="mr-2"/> Resume
-                  </button>
+                  </a>
                 </div>
               </div>
             </div>
@@ -161,7 +198,7 @@ function App() {
               </p>
             </div>
             <div className="max-w-4xl mx-auto">
-              {experiences.map((exp, index) => (
+              {experiences.map((exp) => (
                   <div key={exp.company} className="relative pl-8 pb-12 last:pb-0">
                     {/* Timeline line */}
                     <div className="absolute left-0 top-0 h-full w-0.5 bg-purple-400/30">
@@ -389,21 +426,29 @@ function App() {
                 <form className="space-y-4">
                   <input
                       type="text"
-                      placeholder="Your Name"
                       className="w-full px-4 py-3 rounded-lg bg-white/10 border border-white/20 text-white placeholder-purple-200 focus:outline-none focus:border-purple-400"
+                      placeholder="Your Name"
+                      value={name}
+                      onChange={(e) => setName(e.target.value)}
                   />
                   <input
                       type="email"
                       placeholder="Your Email"
+                      value={email}
                       className="w-full px-4 py-3 rounded-lg bg-white/10 border border-white/20 text-white placeholder-purple-200 focus:outline-none focus:border-purple-400"
+                      onChange={(e) => setEmail(e.target.value)}
                   />
                   <textarea
                       placeholder="Your Message"
                       rows={4}
+                      value={message}
                       className="w-full px-4 py-3 rounded-lg bg-white/10 border border-white/20 text-white placeholder-purple-200 focus:outline-none focus:border-purple-400"
+                      onChange={(e) => setMessage(e.target.value)}
                   ></textarea>
                   <button
-                      className="ml-auto bg-white text-royal-blue px-8 py-3 rounded-full font-semibold hover:bg-purple-100 transition-colors flex items-center">
+                      className="ml-auto bg-white text-royal-blue px-8 py-3 rounded-full font-semibold hover:bg-purple-100 transition-colors flex items-center"
+                      onClick={handleSubmit}
+                  >
                     <Send className="mr-2"/> Send Message
                   </button>
                 </form>

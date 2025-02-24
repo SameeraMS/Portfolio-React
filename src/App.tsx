@@ -43,6 +43,11 @@ function App() {
 
   const handleSubmit = () => {
 
+    if (name === '' || email === '' || message === '') {
+        alert("Please fill in all the fields");
+        return;
+    }
+
     const serviceId = 'service_9bsvbix';
     const templateId = 'template_5pwh07k';
     const publicKey = 'VDd9I0ZeOSjHE89gm';
